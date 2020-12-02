@@ -1,0 +1,76 @@
+.main-category {
+    position: relative;
+
+    > .wine-stain {
+        position: absolute;
+        width: 20%;
+        height: auto;
+        top: -10%;
+        left: 35%;
+        z-index: -2;
+        transform: rotate(90deg);
+    }
+    &__params {
+        .bg-uni-primary {
+            background-color: #e87b80;;
+        }
+        .bg-uni-light {
+            background-color: #f8e9eb;
+        }
+        .bg-uni-secondary {
+            background-color: #b96266;
+        }
+        .bg-uni-img {
+            background-image: url('../images/main-category-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        > div {
+            display: flex;
+            width: 215px;
+            height: 215px;
+            padding: 0;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            > a {
+                color: #212121;
+                text-decoration: none;
+
+                h4 {
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.title-first-word {
+    display: block;
+    color: #b96266;
+}
+
+@media screen and (max-width: 768px) {
+    .main-category {
+    
+        > .wine-stain {
+            width: 30%;
+            top: 0;
+            left: 35%;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-category {
+    
+        > .wine-stain {
+            width: 50%;
+            top: 10%;
+            left: 45%;
+            transform: rotate(-90deg);
+        }
+    }
+}

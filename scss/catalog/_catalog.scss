@@ -1,0 +1,33 @@
+.catalog-header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-catalog {
+    width: 90%;
+    background-color: #CFD8DC;
+    padding: 25px;
+    position: relative;
+    box-shadow: -5px 5px 10px 5px #aeaeae;
+
+    > .content {
+        width: 60%;
+    }
+
+    > .catalog-img-link {
+        display: block;
+        width: 400px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 50px;
+        box-shadow: 0px 0px 5px 0px #000000;
+        > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

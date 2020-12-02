@@ -1,0 +1,53 @@
+.main-who-we {
+    position: relative;
+
+    > .wine-stain {
+        position: absolute;
+        width: 20%;
+        height: auto;
+        top: -10%;
+        left: -5%;
+        z-index: -2;
+    }
+
+    &__card {
+        width: 100%;
+        padding: 25px;
+        background-color: #FAFAFA;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        
+        svg {
+            display: block;
+            fill: #e87b80;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 25px;
+        }
+
+        h5 {
+            font-weight: 400;
+            text-align: center;
+            color: #b96266;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-who-we {
+    
+        > .wine-stain {
+            width: 30%;
+            top: -5%;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-who-we {
+    
+        > .wine-stain {
+            width: 50%;
+            top: 0;
+        }
+    }
+}
