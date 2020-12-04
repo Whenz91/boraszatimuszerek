@@ -1,10 +1,15 @@
 * {
     box-sizing: border-box;
 }
+body {
+    overflow-x: hidden;
+}
 @import '_nav';
 @import './home/header';
 @import './home/category';
 @import './home/whowe';
 @import './home/partners';
 @import './catalog/catalog';
+@import './blog/blogs';
+@import './blog/blog';
 @import '_footer';
