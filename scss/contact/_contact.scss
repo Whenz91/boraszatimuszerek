@@ -1,27 +1,23 @@
-.catalog-main > .row {
+.contact-main > .row {
     > .wine-stain {
         position: absolute;
         width: 20%;
         height: auto;
-        top: 50%;
-        right: 2%;
+        top: 5%;
+        right: 5%;
         z-index: -2;
     }
 }
 @media screen and (max-width: 768px) {
-    .catalog-main > .row {
+    .contact-main > .row {
     
         > .wine-stain {
             width: 30%;
-            top: 75%;
         }
     }
 }
 @media screen and (max-width: 600px) {
-    .catalog-header {
-        background-size: cover;
-    }
-    .catalog-main > .row {
+    .contact-main > .row {
     
         > .wine-stain {
             width: 50%;

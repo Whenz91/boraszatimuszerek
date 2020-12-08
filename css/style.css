@@ -37,7 +37,8 @@ body {
       color: #FAFAFA;
       font-size: 1.2rem;
       transition: all .2s ease-in-out;
-      padding: 5px; }
+      padding: 5px;
+      border: 1px solid transparent; }
       .nav-links > li > a:hover {
         color: #FAFAFA;
         text-decoration: none;
@@ -63,31 +64,47 @@ body {
       margin-right: 0;
       margin-bottom: 25px; } }
 
-.main-header {
+header {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100vh; }
-  .main-header__image {
-    background-image: url("../images/header-image.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .main-header > .wine-stain {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  align-items: center; }
+  header::before {
+    content: url("../images/wave-test.svg");
     position: absolute;
-    width: 20%;
-    height: auto;
-    bottom: 0;
+    bottom: -1rem;
     left: -5%;
-    z-index: -2; }
+    width: 110%;
+    height: auto; }
+  header > .content {
+    color: white;
+    z-index: 4; }
 
-@media screen and (max-width: 768px) {
-  .main-header > .wine-stain {
-    width: 30%; } }
+.main-header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("../images/header-image.jpg");
+  background-position: center; }
+
+.catalog-header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../images/boros-katalogus.png");
+  background-position: center; }
+
+.blogs-header,
+.ph-meter-header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("../../images/szolos-es-falu.jpg");
+  background-position: bottom; }
+
+.blog-header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("../../images/post-2-image.jpg");
+  background-position: bottom;
+  justify-content: center; }
 
 @media screen and (max-width: 600px) {
-  .main-header > .wine-stain {
-    width: 50%; } }
+  header {
+    text-align: center; } }
 
 .main-category {
   position: relative; }
@@ -202,84 +219,27 @@ body {
     right: 10%;
     transform: rotate(-90deg); } }
 
-.catalog-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ECEFF1; }
-
-.main-catalog {
-  width: 90%;
-  background-color: #CFD8DC;
-  padding: 25px;
-  position: relative;
-  box-shadow: -5px 5px 10px 5px #aeaeae; }
-  .main-catalog > .content {
-    width: 60%; }
-  .main-catalog > .catalog-img-link {
-    display: block;
-    width: 400px;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 50px;
-    box-shadow: 0px 0px 5px 0px #000000; }
-    .main-catalog > .catalog-img-link > img {
-      width: 100%;
-      height: auto; }
+.catalog-main > .row > .wine-stain {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  top: 50%;
+  right: 2%;
+  z-index: -2; }
 
 @media screen and (max-width: 768px) {
-  .main-catalog > .content {
-    width: 55%; }
-  .main-catalog > .catalog-img-link {
-    width: 300px;
-    right: -30px; } }
+  .catalog-main > .row > .wine-stain {
+    width: 30%;
+    top: 75%; } }
 
 @media screen and (max-width: 600px) {
-  .main-catalog {
-    width: 100%;
-    box-shadow: none; }
-    .main-catalog > .content {
-      width: 100%;
-      margin-bottom: 50px; }
-    .main-catalog > .catalog-img-link {
-      width: 300px;
-      height: auto;
-      display: block;
-      position: relative;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%); }
-      .main-catalog > .catalog-img-link > img {
-        width: 100%;
-        height: auto; } }
-
-.blogs-header {
-  min-height: 70vh;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("../../images/szolos-es-falu.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .blogs-header__content {
-    color: #ffff; }
-  .blogs-header > .wave {
-    position: absolute;
-    bottom: 15%;
-    left: 0;
-    transform: rotateY(180deg); }
-  .blogs-header > .wave-2 {
-    position: absolute;
-    bottom: 16%;
-    left: -20px;
-    transform: rotateY(180deg);
-    opacity: 0.5; }
+  .catalog-header {
+    background-size: cover; }
+  .catalog-main > .row > .wine-stain {
+    width: 50%; } }
 
 .blogs-main {
-  position: relative;
-  background-color: #FAFAFA; }
+  position: relative; }
   .blogs-main > section {
     padding: 6rem 3rem 3rem; }
   .blogs-main__card {
@@ -319,53 +279,41 @@ body {
     text-decoration: none;
     transform: translateY(-2px); }
 
+@media screen and (max-width: 600px) {
+  .blogs-main__card {
+    height: 350px; } }
+
+.contact-main > .row > .wine-stain {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  top: 5%;
+  right: 5%;
+  z-index: -2; }
+
 @media screen and (max-width: 768px) {
-  .blogs-main > .top-wave {
-    top: -155px; }
-  .blogs-main > .top-wave-2 {
-    top: -165px; } }
+  .contact-main > .row > .wine-stain {
+    width: 30%; } }
 
 @media screen and (max-width: 600px) {
-  .blogs-main > .top-wave {
-    top: -86px; }
-  .blogs-main > .top-wave-2 {
-    top: -92px; } }
+  .contact-main > .row > .wine-stain {
+    width: 50%; } }
 
-.blog-header {
-  min-height: 70vh;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("../../images/post-2-image.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .blog-header__content {
-    color: #ffff;
-    text-align: center; }
-  .blog-header > .wave {
-    position: absolute;
-    bottom: 15%;
+footer {
+  position: relative;
+  margin-top: 5rem; }
+  footer::before {
+    content: url("../images/wave.svg");
+    position: relative;
+    top: 1rem;
     left: 0;
-    transform: rotateY(180deg); }
-  .blog-header > .wave-2 {
-    position: absolute;
-    bottom: 16%;
-    left: -20px;
-    transform: rotateY(180deg);
-    opacity: 0.5; }
-
-@media screen and (max-width: 768px) {
-  .blogs-main > .top-wave {
-    top: -155px; }
-  .blogs-main > .top-wave-2 {
-    top: -165px; } }
-
-@media screen and (max-width: 600px) {
-  .blogs-main > .top-wave {
-    top: -86px; }
-  .blogs-main > .top-wave-2 {
-    top: -92px; } }
+    width: 100%;
+    height: auto; }
 
 .main-footer {
-  background-color: #ffeeee; }
+  background-color: #ffeeee;
+  display: flex;
+  flex-wrap: wrap; }
   .main-footer > ul {
     list-style: none;
     margin: 0;

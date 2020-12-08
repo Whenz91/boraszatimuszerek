@@ -5,11 +5,11 @@ body {
     overflow-x: hidden;
 }
 @import '_nav';
-@import './home/header';
+@import '_header';
 @import './home/category';
 @import './home/whowe';
 @import './home/partners';
 @import './catalog/catalog';
 @import './blog/blogs';
-@import './blog/blog';
+@import './contact/contact';
 @import '_footer';

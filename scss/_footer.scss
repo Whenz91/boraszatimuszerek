@@ -1,5 +1,20 @@
+footer {
+    position: relative;
+    margin-top: 5rem;
+
+    &::before {
+        content: url('../images/wave.svg');
+        position: relative;
+        top: 0+1rem;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+}
 .main-footer {
     background-color: #ffeeee;
+    display: flex;
+    flex-wrap: wrap;
 
     > ul {
         list-style: none;
