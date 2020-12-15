@@ -1,9 +1,10 @@
 .main-nav {
     display: flex;
+    min-height: 5vh;
     justify-content: space-between;
     align-items: center;
     padding: 25px 50px;
-    background-color: #e87b80;
+    background-color: $primary-color;
     position: relative;
 }
 .logo {
@@ -14,7 +15,7 @@
 }
 .mobil-menu {
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid $white;
     border-radius: 5px;
     padding: 5px 10px;
     display: none;
@@ -34,16 +35,16 @@
         margin-right: 35px;
 
         > a {
-            color: #FAFAFA;
+            color: $white;
             font-size: 1.2rem;
             transition: all .2s ease-in-out;
             padding: 5px;
             border: 1px solid transparent;
 
             &:hover {
-                color: #FAFAFA;
+                color: $white;
                 text-decoration: none;
-                border: 1px solid #FAFAFA;
+                border: 1px solid $white;
             }
         }
     }
@@ -60,7 +61,7 @@
         height: auto;
         top: -1000px;
         left: 0;
-        background-color: #e87b80;
+        background-color: $primary-color;
         z-index: 5;
         text-align: center;
         transition: all .4s ease-in-out;

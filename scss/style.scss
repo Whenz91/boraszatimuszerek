@@ -1,9 +1,24 @@
 * {
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     overflow-x: hidden;
 }
+$primary-color: #903CD2; // main old color: #e87b80, footer old color: #ffeeee
+$light-primary-color: #C68AF5;
+
+$light-purple-color: #CE93D8;
+$light-deep-purple-color: #B39DDB;
+$light-indigo-color: #9FA8DA;
+
+$light-secondary-color: #cd8ffc;
+$white: #ffffff;
+$black: #1a1a1a;
+
+
 @import '_nav';
 @import '_header';
 @import './home/category';
@@ -12,4 +27,6 @@ body {
 @import './catalog/catalog';
 @import './blog/blogs';
 @import './contact/contact';
+@import './products/header';
+@import './products/product-nav-row';
 @import '_footer';
